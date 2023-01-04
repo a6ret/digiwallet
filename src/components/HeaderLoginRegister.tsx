@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const HeaderLoginRegister = () => {
@@ -19,25 +19,28 @@ const HeaderLoginRegister = () => {
             {/* Menu */}
             <ul className='hidden md:flex'>
                 <li>
-                    <Link
-                        to='/home'
-                        className='hover:text-[#eeeeee] text-[#ffffff] font-semibold duration-300'>
+                    <NavLink
+                        end
+                        to={'/home'}
+                        className='hover:text-[#ffffff] duration-300 font-semibold'>
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link
-                        to='/'
+                    <NavLink
+                        end
+                        to={'/'}
                         className='hover:text-[#ffffff] duration-300 font-semibold'>
                         Login
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link
-                        to='/register'
+                    <NavLink
+                        end
+                        to={'/register'}
                         className='hover:text-[#ffffff] duration-300 font-semibold'>
                         Register
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
 

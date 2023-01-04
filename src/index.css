@@ -14,3 +14,7 @@
         @apply cursor-pointer;
     }
 }
+
+.active {
+    color: white;
+}
